@@ -1,6 +1,11 @@
-<div class="timeline-event">
-  <div class="timeline-event-date">{{ .Get "date" }}</div>
+{{- $logo := .Get "logo" -}}
+{{- $current := eq (.Get "current") "true" -}}
+<div class="timeline-event{{ if $current }} timeline-event--current{{ end }}">
+  <div class="timeline-event-marker">
+    {{ if $logo }}<img src="{{ $logo }}" alt="{{ .Get "company" }} logo" loading="lazy">{{ end }}
+  </div>
   <div class="timeline-event-content">
+    <div class="timeline-event-date">{{ .Get "date" }}</div>
     <div class="timeline-event-header">
       <span class="timeline-event-role">{{ .Get "role" }}</span>
       {{ with .Get "company" }}<span class="timeline-event-company"> · {{ . }}</span>{{ end }}
