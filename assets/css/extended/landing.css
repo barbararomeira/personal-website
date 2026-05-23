@@ -1,0 +1,63 @@
+/* Ocean-blue accent — theme-aware */
+:root {
+  --accent: #2c7da0;
+  --accent-strong: #1e5c7a;
+  --accent-soft: rgba(44, 125, 160, 0.12);
+  --accent-glow: rgba(44, 125, 160, 0.18);
+}
+
+:root[data-theme="dark"] {
+  --accent: #5dabcc;
+  --accent-strong: #88c5df;
+  --accent-soft: rgba(93, 171, 204, 0.16);
+  --accent-glow: rgba(93, 171, 204, 0.22);
+}
+
+/* Soft halo behind the home-page hero */
+.profile {
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 38%, var(--accent-glow) 0%, transparent 70%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, var(--accent-soft) 0%, transparent 70%);
+}
+
+/* Profile photo: soft ocean ring + drop shadow */
+.profile .profile_inner img {
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 28px var(--accent-soft);
+}
+
+/* Social icons hover → ocean */
+.social-icons a {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Profile-mode buttons → outline blue, fill on hover */
+.profile .buttons .button {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
+}
+
+.profile .buttons .button:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Inline links in content (post-body, about, experience) pick up the accent */
+.post-content a,
+.post-single .post-content a {
+  color: var(--accent);
+  text-decoration-color: var(--accent-soft);
+}
+
+.post-content a:hover {
+  color: var(--accent-strong);
+}
