@@ -114,6 +114,9 @@ buildExpired = false
   url = "/archives/"
   weight = 50
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [markup.highlight]
   noClasses = false
   codeFences = true
