@@ -22,8 +22,17 @@
                     <img src="{{ $img.RelPermalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
-                <img src="{{- site.Params.label.icon | relURL -}}" alt="" aria-label="logo"
+                {{- $icons := site.Params.label.icons }}
+                {{- $iconURLs := slice }}
+                {{- range $icons }}{{- $iconURLs = $iconURLs | append (. | relURL) }}{{- end }}
+                <img id="logo-icon"
+                    src="{{- site.Params.label.icon | relURL -}}"
+                    {{- with $iconURLs }} data-icons="{{ delimit . "," }}"{{- end }}
+                    alt="" aria-label="logo"
                     height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- with $iconURLs }}
+                <script>(function(){var i=document.getElementById('logo-icon');if(!i||!i.dataset.icons)return;var l=i.dataset.icons.split(',');var p=l[Math.floor(Math.random()*l.length)];if(p!==i.getAttribute('src'))i.src=p;})();</script>
+                {{- end }}
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}

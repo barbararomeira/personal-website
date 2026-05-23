@@ -51,6 +51,8 @@ buildExpired = false
     text = "Bárbara"
     icon = "img/icons/fries.gif"
     iconHeight = 32
+    # Pool of icons; a small JS in the header partial picks one at random on each page load.
+    icons = ["img/icons/fries.gif", "img/icons/fries2.gif"]
 
   # Home page profile mode (hero-style landing)
   [params.profileMode]
