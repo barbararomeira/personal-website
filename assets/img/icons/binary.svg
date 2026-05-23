@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="binary animation">
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Courier New', monospace"
+     font-size="16" font-weight="700"
+     fill="currentColor"
+     text-anchor="middle"
+     dominant-baseline="middle">
+
+    <!-- Row 1 (y=14) -->
+    <text x="10" y="14">1</text>
+    <g transform="translate(26 14)">
+      <text opacity="1">1<animate attributeName="opacity" values="1;1;0;0;1" dur="3s"  repeatCount="indefinite"/></text>
+      <text opacity="0">0<animate attributeName="opacity" values="0;0;1;1;0" dur="3s"  repeatCount="indefinite"/></text>
+    </g>
+    <text x="42" y="14">1</text>
+    <text x="58" y="14">0</text>
+
+    <!-- Row 2 (y=34) -->
+    <text x="10" y="34">0</text>
+    <text x="26" y="34">1</text>
+    <g transform="translate(42 34)">
+      <text opacity="1">0<animate attributeName="opacity" values="1;1;0;0;1" dur="2.5s" repeatCount="indefinite"/></text>
+      <text opacity="0">1<animate attributeName="opacity" values="0;0;1;1;0" dur="2.5s" repeatCount="indefinite"/></text>
+    </g>
+    <text x="58" y="34">1</text>
+
+    <!-- Row 3 (y=54) -->
+    <g transform="translate(10 54)">
+      <text opacity="1">1<animate attributeName="opacity" values="1;1;0;0;1" dur="2.8s" repeatCount="indefinite"/></text>
+      <text opacity="0">0<animate attributeName="opacity" values="0;0;1;1;0" dur="2.8s" repeatCount="indefinite"/></text>
+    </g>
+    <text x="26" y="54">0</text>
+    <text x="42" y="54">1</text>
+    <g transform="translate(58 54)">
+      <text opacity="1">0<animate attributeName="opacity" values="1;1;0;0;1" dur="3.3s" repeatCount="indefinite"/></text>
+      <text opacity="0">1<animate attributeName="opacity" values="0;0;1;1;0" dur="3.3s" repeatCount="indefinite"/></text>
+    </g>
+  </g>
+</svg>

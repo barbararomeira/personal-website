@@ -49,8 +49,8 @@ buildExpired = false
   # schema.org, SEO — only the visible header text/icon change.
   [params.label]
     text = "Bárbara"
-    icon = "img/icons/fries.svg"
-    iconHeight = 32
+    icon = "img/icons/binary.svg"
+    iconHeight = 28
 
   # Home page profile mode (hero-style landing)
   [params.profileMode]
