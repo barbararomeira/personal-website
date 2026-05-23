@@ -57,6 +57,9 @@ buildExpired = false
       name = "About"
       url = "about"
     [[params.profileMode.buttons]]
+      name = "Experience"
+      url = "experience"
+    [[params.profileMode.buttons]]
       name = "Posts"
       url = "posts"
     [[params.profileMode.buttons]]
@@ -92,6 +95,12 @@ buildExpired = false
   name = "About"
   url = "/about/"
   weight = 10
+
+[[menu.main]]
+  identifier = "experience"
+  name = "Experience"
+  url = "/experience/"
+  weight = 15
 
 [[menu.main]]
   identifier = "posts"

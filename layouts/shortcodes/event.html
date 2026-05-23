@@ -1,0 +1,15 @@
+<div class="timeline-event">
+  <div class="timeline-event-date">{{ .Get "date" }}</div>
+  <div class="timeline-event-content">
+    <div class="timeline-event-header">
+      <span class="timeline-event-role">{{ .Get "role" }}</span>
+      {{ with .Get "company" }}<span class="timeline-event-company"> · {{ . }}</span>{{ end }}
+      {{ with .Get "location" }}<span class="timeline-event-location"> · {{ . }}</span>{{ end }}
+    </div>
+    {{ with .Inner }}
+    <div class="timeline-event-body">
+      {{ . | $.Page.RenderString }}
+    </div>
+    {{ end }}
+  </div>
+</div>
