@@ -26,7 +26,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--theme);
+  /* Fixed light tile so company logos (often dark on transparent) stay readable in dark mode */
+  background: #f5f5f7;
   border: 2px solid var(--border);
   display: flex;
   align-items: center;
