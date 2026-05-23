@@ -15,9 +15,9 @@
     {{ .Inner }}
   </div>
 
-  {{ with .Get "results" }}
+  {{ with .Get "impact" }}
   <div class="project-block">
-    <div class="project-block-label">Results</div>
+    <div class="project-block-label">Impact</div>
     <p>{{ . | safeHTML }}</p>
   </div>
   {{ end }}

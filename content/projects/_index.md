@@ -9,7 +9,7 @@ A running list of side projects, prototypes, and experiments. Most live on [GitH
 {{< project name="AI Manufacturing Digest"
            tagline="A daily news bot for AI in manufacturing — read everything for me, every morning."
            problem="To stay current on how AI is being used in factories, you need to read 20+ blogs and newsletters every day. Most of what's out there repeats the same story across sites, or is just company marketing dressed as news. It takes too much time, and the real signal gets lost in the noise."
-           results="One Notion page to check each morning instead of 20 different sites. The AI keeps only the stories that matter — real factory deployments, real outcomes, real lessons — and drops the marketing fluff. It runs by itself, every day, with zero manual work."
+           impact="Reading 20+ sites used to take a real chunk of the morning, and most of what I read was repetition or marketing. Now a quick scan of one curated Notion page surfaces only the stories that actually move the field — real deployments, real outcomes. Over time, the database becomes a searchable archive of AI-in-manufacturing trends I can mine when client conversations or product decisions need recent evidence."
            tech="Python, GitHub Actions, LLM · OpenRouter, Notion API, RSS"
            github="https://github.com/barbararomeira/ai-manufacturing-digest" >}}
 {{< step icon="📰" label="RSS Feeds"  sub="22+ sources" >}}
