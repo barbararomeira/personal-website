@@ -59,12 +59,12 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 ## Certifications
 
 {{< certs >}}
-{{< cert name="AI Product Manager Nanodegree" issuer="Udacity" year="2025" abbr="UDAC" >}}
-{{< cert name="Product Discovery (PDC)™" issuer="Product School" year="2024" abbr="PDC" >}}
-{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="2026" abbr="MBB" >}}
-{{< cert name="HCMP® 3G Change Management" issuer="Human Change Management Institute" year="2022" abbr="HCMP" >}}
+{{< cert name="AI Product Manager Nanodegree" issuer="Udacity" year="2025" abbr="UDAC" image="/img/badges/udacity.svg" >}}
+{{< cert name="Product Discovery (PDC)™" issuer="Product School" year="2024" abbr="PDC" image="/img/badges/productschool.svg" >}}
+{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="2026 (in progress)" abbr="MBB" >}}
+{{< cert name="HCMP® 3G Change Management" issuer="Human Change Management Institute" year="2022" abbr="HCMP" image="/img/badges/hcmp.png" >}}
 {{< cert name="Master in Continuous Improvement" issuer="APCER" year="2021" abbr="MCI" >}}
-{{< cert name="Kaizen Certifications (VSM, Production, Logistics)" issuer="Kaizen Institute" year="2020" abbr="KZN" >}}
+{{< cert name="Kaizen Certifications (VSM, Production, Logistics)" issuer="Kaizen Institute" year="2020" abbr="KZN" image="/img/badges/kaizen.png" >}}
 {{< cert name="Lean People Leadership (Coaching)" issuer="CLT Services" year="2020" abbr="LPL" >}}
 {{< cert name="Postgraduate Diploma in Lean Management" issuer="CLT Services" year="2019" abbr="LEAN" >}}
 {{< /certs >}}
