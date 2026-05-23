@@ -58,15 +58,44 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 
 ## Certifications
 
+### AI & Product
+
 {{< certs >}}
-{{< cert name="AI Product Manager Nanodegree" issuer="Udacity" year="2025" abbr="UDAC" image="/img/badges/udacity.svg" >}}
-{{< cert name="Product Discovery (PDC)™" issuer="Product School" year="2024" abbr="PDC" image="/img/badges/productschool.svg" >}}
-{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="2026 (in progress)" abbr="MBB" >}}
-{{< cert name="HCMP® 3G Change Management" issuer="Human Change Management Institute" year="2022" abbr="HCMP" image="/img/badges/hcmp.png" >}}
-{{< cert name="Master in Continuous Improvement" issuer="APCER" year="2021" abbr="MCI" >}}
+{{< cert name="Introduction to Subagents" issuer="Anthropic" year="May 2026" abbr="SUB" >}}
+{{< cert name="Claude Code 101" issuer="Anthropic" year="May 2026" abbr="CC101" >}}
+{{< cert name="Practical Application of Generative AI" issuer="Project Management Institute" year="Dec 2025" abbr="PRACT" >}}
+{{< cert name="Prompt Engineering for Project Managers" issuer="Project Management Institute" year="Dec 2025" abbr="PROMPT" >}}
+{{< cert name="Generative AI for Project Managers" issuer="Project Management Institute" year="Nov 2025" abbr="GENAI" >}}
+{{< cert name="AI Product Manager Nanodegree" issuer="Udacity" year="Aug 2025" abbr="AIPM" image="/img/badges/udacity.svg" >}}
+{{< cert name="Product Discovery (PDC)™" issuer="Product School" year="Dec 2024" abbr="PDC" image="/img/badges/productschool.svg" >}}
+{{< /certs >}}
+
+### Lean & Continuous Improvement
+
+{{< certs >}}
+{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="Expected 2026" abbr="MBB" >}}
+{{< cert name="Lean Six Sigma Yellow Belt" issuer="Lean Six Sigma Institute" year="Mar 2026" abbr="YB" >}}
+{{< cert name="Lean Six Sigma White Belt" issuer="Lean Six Sigma Institute" year="Dec 2025" abbr="WB" >}}
+{{< cert name="Lean Management" issuer="Lean Six Sigma Institute" year="Jun 2025" abbr="LMGT" >}}
+{{< cert name="Master Program — Continuous Improvement" issuer="APCER" year="Feb 2021" abbr="MCI" >}}
 {{< cert name="Kaizen Certifications (VSM, Production, Logistics)" issuer="Kaizen Institute" year="2020" abbr="KZN" image="/img/badges/kaizen.png" >}}
-{{< cert name="Lean People Leadership (Coaching)" issuer="CLT Services" year="2020" abbr="LPL" >}}
-{{< cert name="Postgraduate Diploma in Lean Management" issuer="CLT Services" year="2019" abbr="LEAN" >}}
+{{< cert name="Postgraduate Diploma in Lean Management" issuer="CLT Services" year="Dec 2019" abbr="PgD" >}}
+{{< /certs >}}
+
+### Leadership & Change
+
+{{< certs >}}
+{{< cert name="High-Performance Leadership: Lessons from Formula 1®" issuer="Santander Open Academy" year="Dec 2025" abbr="F1" >}}
+{{< cert name="HCMP® 3G Expert Professional" issuer="Human Change Management Institute" year="Jan 2022" abbr="HCMP" image="/img/badges/hcmp.png" >}}
+{{< cert name="HCMP® 3G Practitioner" issuer="Human Change Management Institute" year="Jan 2022" abbr="3GP" >}}
+{{< cert name="Lean People Leadership" issuer="CLT Services" year="Apr 2020" abbr="LPL" >}}
+{{< /certs >}}
+
+### Other
+
+{{< certs >}}
+{{< cert name="Occupational Health and Safety Senior Technician (Level 6)" issuer="Politécnico da Guarda" year="Jun 2022" abbr="OHS" >}}
+{{< cert name="Certificate of Pedagogical Skills" issuer="IEFP" year="Jun 2019" abbr="CCP" >}}
 {{< /certs >}}
 
 ## Skills
