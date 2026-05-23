@@ -89,12 +89,6 @@ buildExpired = false
   home = ["HTML", "RSS", "JSON"]
 
 [[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 10
-
-[[menu.main]]
   identifier = "experience"
   name = "Experience"
   url = "/experience/"
