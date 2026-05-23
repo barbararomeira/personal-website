@@ -2,8 +2,7 @@
 title: "Experience"
 url: "/experience/"
 summary: "Career, education, and certifications — a chronological timeline."
-ShowToc: true
-TocOpen: false
+ShowToc: false
 ShowBreadCrumbs: false
 ShowReadingTime: false
 ShowWordCount: false
@@ -97,16 +96,6 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 {{< cert name="Occupational Health and Safety Senior Technician (Level 6)" issuer="Politécnico da Guarda" year="Jun 2022" abbr="OHS" >}}
 {{< cert name="Certificate of Pedagogical Skills" issuer="IEFP" year="Jun 2019" abbr="CCP" >}}
 {{< /certs >}}
-
-## Skills
-
-**Product Management** — Roadmap ownership · OKR management · PRD development · User interviews & discovery · JTBD · MVP scoping · KPI & metrics definition · Agile & Scrum · Wireframing · Stakeholder management · Customer feedback loops
-
-**AI & Technology** — AI/ML product integration · Industry 4.0 · B2B SaaS · Generative AI · Prompt engineering · AI adoption strategy · Product analytics · AI-native prototyping (Replit, Lovable, Claude Code) · LLM product development · Agentic AI · Computer vision
-
-**Lean & Operational Excellence** — Lean Six Sigma (MBB) · Continuous improvement · Value stream mapping · Kaizen · SMED · 5S · TPM · Process optimisation · Manufacturing operations · Waste reduction
-
-**Leadership & Consulting** — Operational transformation · Change management (HCMP®) · Programme delivery · Client engagement & advisory · Cross-functional leadership · Team & mentoring · Training & capability building · Cost reduction
 
 ## Languages
 

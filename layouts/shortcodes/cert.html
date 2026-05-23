@@ -1,8 +1,8 @@
 {{- $link := .Get "link" -}}
 {{- if $link -}}
-<a class="cert-card" href="{{ $link }}" target="_blank" rel="noopener">
+<a class="cert-card" href="{{ $link }}" target="_blank" rel="noopener" aria-label="{{ .Get "name" }} certificate, {{ .Get "issuer" }} {{ .Get "year" }}">
 {{- else -}}
-<div class="cert-card">
+<div class="cert-card" role="group" aria-label="{{ .Get "name" }} certificate, {{ .Get "issuer" }} {{ .Get "year" }}">
 {{- end }}
   <div class="cert-card-image">
     {{ with .Get "image" }}
@@ -11,9 +11,9 @@
       <div class="cert-card-image-placeholder">{{ with .Get "abbr" }}{{ . }}{{ else }}CERT{{ end }}</div>
     {{ end }}
   </div>
-  <div class="cert-card-name">{{ .Get "name" }}</div>
-  <div class="cert-card-meta">
-    {{ with .Get "issuer" }}{{ . }}{{ end }}{{ with .Get "year" }} · {{ . }}{{ end }}
+  <div class="cert-card-overlay">
+    <div class="cert-card-name">{{ .Get "name" }}</div>
+    <div class="cert-card-meta">{{ .Get "issuer" }}{{ with .Get "year" }} · {{ . }}{{ end }}</div>
   </div>
 {{- if $link -}}
 </a>

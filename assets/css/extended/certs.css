@@ -7,72 +7,40 @@
 
 .cert-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0.7rem 0.6rem;
+  display: block;
+  aspect-ratio: 4 / 3;
   background: var(--entry);
   border: 1px solid var(--border);
   border-radius: 8px;
+  overflow: hidden;
   transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
   color: inherit;
   text-decoration: none;
-  min-height: 88px;
 }
 
 a.cert-card { cursor: pointer; }
 
 .cert-card:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   border-color: var(--secondary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   z-index: 2;
 }
 
-.cert-card-name {
-  font-weight: 600;
-  font-size: 0.8em;
-  line-height: 1.35;
-  color: var(--primary);
-  margin-bottom: 0.3rem;
-}
-
-.cert-card-meta {
-  font-size: 0.72em;
-  color: var(--secondary);
-  line-height: 1.4;
-}
-
-/* Image hidden by default, revealed as a popover below the card on hover */
 .cert-card-image {
   position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  width: 260px;
-  aspect-ratio: 4 / 3;
-  transform: translateX(-50%) translateY(-4px);
-  background: var(--entry);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 6px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 10;
-}
-
-.cert-card:hover .cert-card-image {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  transition: opacity 0.2s ease 0.08s, transform 0.2s ease 0.08s;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme);
 }
 
 .cert-card-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  padding: 4px;
 }
 
 .cert-card-image-placeholder {
@@ -83,8 +51,48 @@ a.cert-card { cursor: pointer; }
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 700;
   letter-spacing: 0.06em;
-  border-radius: 6px;
+}
+
+/* Name + meta overlay — hidden by default, fades in on hover */
+.cert-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.65rem 0.7rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 35%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none;
+}
+
+.cert-card:hover .cert-card-overlay,
+.cert-card:focus-visible .cert-card-overlay {
+  opacity: 1;
+}
+
+.cert-card-name {
+  font-weight: 600;
+  font-size: 0.82em;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.cert-card-meta {
+  font-size: 0.72em;
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+/* Touch devices have no hover — show overlay always so the cert is identifiable */
+@media (hover: none) {
+  .cert-card-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 60%);
+  }
 }
