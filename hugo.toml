@@ -44,6 +44,14 @@ buildExpired = false
   [params.assets]
     disableHLJS = true
 
+  # Header logo: short display name + animated fries icon next to it.
+  # site.Title stays full ("Bárbara Gomes Romeira") for browser tabs, RSS,
+  # schema.org, SEO — only the visible header text/icon change.
+  [params.label]
+    text = "Bárbara"
+    icon = "img/icons/fries.svg"
+    iconHeight = 32
+
   # Home page profile mode (hero-style landing)
   [params.profileMode]
     enabled = true

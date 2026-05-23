@@ -1,0 +1,5 @@
+/* tiny right margin so the fries icon doesn't crowd "Bárbara" */
+.logo a img[aria-label="logo"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}

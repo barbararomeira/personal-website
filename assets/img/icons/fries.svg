@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="animated fries icon">
+
+  <!-- steam wisps -->
+  <g fill="#cbd5e0">
+    <circle cx="22" cy="18" r="1.5" opacity="0">
+      <animate attributeName="cy" from="20" to="2"   dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="32" cy="18" r="1.5" opacity="0">
+      <animate attributeName="cy" from="20" to="2"   dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="42" cy="18" r="1.5" opacity="0">
+      <animate attributeName="cy" from="20" to="2"   dur="2.5s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.5s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 4 swaying fries (rotate around the base where they meet the carton) -->
+  <g>
+    <rect x="18" y="16" width="5" height="22" rx="2" fill="#FFC107">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-3 20.5 38; 3 20.5 38; -3 20.5 38" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="26" y="10" width="5" height="28" rx="2" fill="#FFD740">
+      <animateTransform attributeName="transform" type="rotate"
+        values="2 28.5 38; -2 28.5 38; 2 28.5 38" dur="2.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="34" y="14" width="5" height="24" rx="2" fill="#FFC107">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-2 36.5 38; 2 36.5 38; -2 36.5 38" dur="2.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="42" y="11" width="5" height="27" rx="2" fill="#FFD740">
+      <animateTransform attributeName="transform" type="rotate"
+        values="3 44.5 38; -3 44.5 38; 3 44.5 38" dur="2.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- red carton (drawn AFTER fries so it overlaps their bases) -->
+  <path d="M 14,38 L 50,38 L 46,58 L 18,58 Z" fill="#DC2626"/>
+  <!-- small left-edge highlight to give the carton depth -->
+  <path d="M 14,38 L 18,58 L 20,58 L 16,38 Z" fill="#EF4444"/>
+  <!-- white vertical stripes -->
+  <rect x="23" y="42" width="2" height="14" fill="white" opacity="0.9"/>
+  <rect x="31" y="42" width="2" height="14" fill="white" opacity="0.9"/>
+  <rect x="39" y="42" width="2" height="14" fill="white" opacity="0.9"/>
+
+</svg>
