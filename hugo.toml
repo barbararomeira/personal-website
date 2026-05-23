@@ -1,0 +1,124 @@
+baseURL = "https://barbararomeira.com/"
+languageCode = "en-us"
+title = "Bárbara Gomes Romeira"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 5
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Bárbara Gomes Romeira"
+  description = "AI Product Leader. PhD in Industrial Engineering. Building products where AI meets the factory floor."
+  keywords = ["AI", "Product Management", "Lean", "Continuous Improvement", "Industrial Engineering"]
+  author = "Bárbara Gomes Romeira"
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+  [params.assets]
+    disableHLJS = true
+
+  # Home page profile mode (hero-style landing)
+  [params.profileMode]
+    enabled = true
+    title = "Bárbara Gomes Romeira"
+    subtitle = "AI Product Leader · PhD in Industrial Engineering · 7+ years building products and leading lean transformations across Europe and North America."
+    imageUrl = ""
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Bárbara Gomes Romeira"
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "about"
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "posts"
+    [[params.profileMode.buttons]]
+      name = "Projects"
+      url = "projects"
+
+  # Social icons in the header — add Substack here once you have the URL
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/barbararomeira"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/dr-b%C3%A1rbara-gomes-romeira"
+  # [[params.socialIcons]]
+  #   name = "substack"
+  #   url = "https://YOURHANDLE.substack.com"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10
+    keys = ["title", "permalink", "summary", "content"]
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "archive"
+  name = "Archive"
+  url = "/archives/"
+  weight = 50
+
+[markup.highlight]
+  noClasses = false
+  codeFences = true
+  guessSyntax = true
+  style = "monokai"

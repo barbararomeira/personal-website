@@ -1,0 +1,12 @@
+# Hugo build artifacts
+/public/
+/resources/
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
