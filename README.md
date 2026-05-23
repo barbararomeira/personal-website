@@ -5,10 +5,10 @@ Source for [barbararomeira.com](https://barbararomeira.com) — a Hugo site usin
 ## Local preview
 
 ```bash
-hugo server -D
+hugo server -D --baseURL http://localhost:1313/ --appendPort=false
 ```
 
-Then open http://localhost:1313/. The `-D` flag includes drafts.
+Then open http://localhost:1313/. The `-D` flag includes drafts. The `--baseURL` override is needed because the production `baseURL` in `hugo.toml` is `https://barbararomeira.com/`; without the override, PaperMod's profile-mode image (via `absURL`) tries to load from the production host and fails locally.
 
 ## Writing a post
 
