@@ -1,0 +1,8 @@
+<div class="flow-step-wrapper">
+  <div class="flow-node">
+    {{ with .Get "icon" }}<span class="flow-icon">{{ . }}</span>{{ end }}
+    <span class="flow-label">{{ .Get "label" }}</span>
+    {{ with .Get "sub" }}<span class="flow-sub">{{ . }}</span>{{ end }}
+  </div>
+  <div class="flow-arrow"><span class="flow-dot"></span></div>
+</div>

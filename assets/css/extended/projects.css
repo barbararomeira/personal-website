@@ -13,9 +13,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.project-header {
-  margin-bottom: 1rem;
-}
+.project-header { margin-bottom: 1rem; }
 
 .project-name {
   margin: 0 0 0.4rem 0;
@@ -34,14 +32,26 @@
 /* ───────────────── Flow diagram ───────────────── */
 
 .project-flow {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-  align-items: center;
-  gap: 0.4rem;
+  display: flex;
+  align-items: stretch;
   margin: 1.5rem 0;
 }
 
+.flow-step-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.flow-step-wrapper:last-child {
+  flex: 0 1 auto;
+}
+
+.flow-step-wrapper:last-child .flow-arrow { display: none; }
+
 .flow-node {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,10 +90,11 @@
 
 .flow-arrow {
   position: relative;
-  width: 100%;
-  min-width: 36px;
+  flex: 0 0 40px;
+  width: 40px;
   height: 2px;
   background: linear-gradient(to right, var(--border) 0%, var(--accent, var(--secondary)) 100%);
+  margin: 0 4px;
   align-self: center;
 }
 
@@ -110,11 +121,18 @@
   animation: flow-travel 2.4s cubic-bezier(0.55, 0.06, 0.45, 0.94) infinite;
 }
 
+/* Stagger the dots so they read as a continuous stream */
+.flow-step-wrapper:nth-child(2) .flow-dot { animation-delay: 0.4s; }
+.flow-step-wrapper:nth-child(3) .flow-dot { animation-delay: 0.8s; }
+.flow-step-wrapper:nth-child(4) .flow-dot { animation-delay: 1.2s; }
+.flow-step-wrapper:nth-child(5) .flow-dot { animation-delay: 1.6s; }
+.flow-step-wrapper:nth-child(6) .flow-dot { animation-delay: 2s; }
+
 @keyframes flow-travel {
-  0%   { left: -5%; opacity: 0;   transform: scale(0.5); }
-  15%  { opacity: 1;               transform: scale(1); }
-  85%  { opacity: 1;               transform: scale(1); }
-  100% { left: 100%; opacity: 0;   transform: scale(0.7); }
+  0%   { left: -5%; opacity: 0;  transform: scale(0.5); }
+  15%  { opacity: 1;             transform: scale(1); }
+  85%  { opacity: 1;             transform: scale(1); }
+  100% { left: 100%; opacity: 0; transform: scale(0.7); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -123,15 +141,17 @@
 
 /* Collapse to vertical layout on narrow screens */
 @media (max-width: 640px) {
-  .project-flow {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
+  .project-flow { flex-direction: column; }
+
+  .flow-step-wrapper {
+    flex-direction: column;
+    width: 100%;
   }
 
   .flow-arrow {
     width: 2px;
     height: 28px;
-    margin: 0 auto;
+    margin: 4px 0;
     background: linear-gradient(to bottom, var(--border) 0%, var(--accent, var(--secondary)) 100%);
   }
 
@@ -151,14 +171,14 @@
   }
 
   @keyframes flow-travel-v {
-    0%   { top: -5%; opacity: 0;   transform: scale(0.5); }
-    15%  { opacity: 1;              transform: scale(1); }
-    85%  { opacity: 1;              transform: scale(1); }
-    100% { top: 100%; opacity: 0;   transform: scale(0.7); }
+    0%   { top: -5%; opacity: 0;  transform: scale(0.5); }
+    15%  { opacity: 1;            transform: scale(1); }
+    85%  { opacity: 1;            transform: scale(1); }
+    100% { top: 100%; opacity: 0; transform: scale(0.7); }
   }
 }
 
-/* ───────────────── Tech tags ───────────────── */
+/* ───────────────── Tech tags + link ───────────────── */
 
 .project-tech {
   display: flex;
