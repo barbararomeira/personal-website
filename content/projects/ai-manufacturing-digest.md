@@ -2,7 +2,7 @@
 title: "AI Manufacturing Digest"
 date: 2026-03-01
 summary: "A daily news bot for AI in manufacturing — read everything for me, every morning."
-tags: ["AI", "LLM", "Automation", "Python", "GitHub Actions", "Notion", "RSS"]
+tags: ["Automation", "Manufacturing"]
 ---
 
 {{< project name="AI Manufacturing Digest"
