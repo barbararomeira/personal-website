@@ -2,23 +2,35 @@
 :root {
   --accent: #2c7da0;
   --accent-strong: #1e5c7a;
-  --accent-soft: rgba(44, 125, 160, 0.12);
-  --accent-glow: rgba(44, 125, 160, 0.18);
+  --accent-soft: rgba(44, 125, 160, 0.10);
+  --accent-glow: rgba(44, 125, 160, 0.14);
+  --sand-soft: rgba(232, 217, 192, 0.45);
 }
 
 :root[data-theme="dark"] {
   --accent: #5dabcc;
   --accent-strong: #88c5df;
-  --accent-soft: rgba(93, 171, 204, 0.16);
-  --accent-glow: rgba(93, 171, 204, 0.22);
+  --accent-soft: rgba(93, 171, 204, 0.10);
+  --accent-glow: rgba(93, 171, 204, 0.15);
+  --sand-soft: rgba(160, 130, 95, 0.13);
 }
 
-/* Soft halo behind the home-page hero */
+/* Wave-on-sand: a wide, low-alpha blue wash above, fading into a warm sand undertone below.
+   No hard boundaries — three soft stops on each layer to keep the falloff organic. */
 .profile {
   position: relative;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 38%, var(--accent-glow) 0%, transparent 70%),
-    radial-gradient(ellipse 90% 60% at 50% 100%, var(--accent-soft) 0%, transparent 70%);
+    radial-gradient(
+      ellipse 150% 60% at 50% 12%,
+      var(--accent-glow) 0%,
+      var(--accent-soft) 35%,
+      transparent 85%
+    ),
+    radial-gradient(
+      ellipse 140% 45% at 50% 95%,
+      var(--sand-soft) 0%,
+      transparent 80%
+    );
 }
 
 /* Profile photo: soft ocean ring + drop shadow */
