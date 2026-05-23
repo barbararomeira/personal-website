@@ -1,16 +1,22 @@
+{{- $link := .Get "link" -}}
+{{- if $link -}}
+<a class="cert-card" href="{{ $link }}" target="_blank" rel="noopener">
+{{- else -}}
 <div class="cert-card">
+{{- end }}
   <div class="cert-card-image">
     {{ with .Get "image" }}
-      <img src="{{ . }}" alt="{{ $.Get "name" }} badge" loading="lazy">
+      <img src="{{ . }}" alt="{{ $.Get "name" }} certificate" loading="lazy">
     {{ else }}
-      <div class="cert-card-image-placeholder">{{ with .Get "abbr" }}{{ . }}{{ else }}BADGE{{ end }}</div>
+      <div class="cert-card-image-placeholder">{{ with .Get "abbr" }}{{ . }}{{ else }}CERT{{ end }}</div>
     {{ end }}
   </div>
   <div class="cert-card-name">{{ .Get "name" }}</div>
   <div class="cert-card-meta">
     {{ with .Get "issuer" }}{{ . }}{{ end }}{{ with .Get "year" }} · {{ . }}{{ end }}
   </div>
-  {{ with .Get "verify" }}
-  <div class="cert-card-verify"><a href="{{ . }}" target="_blank" rel="noopener">Verify</a></div>
-  {{ end }}
+{{- if $link -}}
+</a>
+{{- else -}}
 </div>
+{{- end -}}
