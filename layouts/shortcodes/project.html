@@ -4,9 +4,23 @@
     {{ with .Get "tagline" }}<p class="project-tagline">{{ . | safeHTML }}</p>{{ end }}
   </div>
 
+  {{ with .Get "problem" }}
+  <div class="project-block">
+    <div class="project-block-label">The problem</div>
+    <p>{{ . | safeHTML }}</p>
+  </div>
+  {{ end }}
+
   <div class="project-flow" aria-label="{{ .Get "name" }} flow">
     {{ .Inner }}
   </div>
+
+  {{ with .Get "results" }}
+  <div class="project-block">
+    <div class="project-block-label">Results</div>
+    <p>{{ . | safeHTML }}</p>
+  </div>
+  {{ end }}
 
   {{ with .Get "tech" }}
   <div class="project-tech">
