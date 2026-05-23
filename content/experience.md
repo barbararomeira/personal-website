@@ -99,4 +99,4 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 
 ## Languages
 
-Portuguese (native) · English (advanced) · Spanish (B2)
+English (advanced) · Portuguese (native) · Spanish (B2)

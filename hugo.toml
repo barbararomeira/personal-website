@@ -49,22 +49,10 @@ buildExpired = false
     enabled = true
     title = "Bárbara Gomes Romeira"
     subtitle = "AI Product Leader · PhD in Industrial Engineering · 7+ years building products and leading lean transformations across Europe and North America."
-    imageUrl = "/img/profile/barbara.jpg"
+    imageUrl = "img/profile/barbara.jpg"
     imageWidth = 140
     imageHeight = 140
     imageTitle = "Bárbara Gomes Romeira"
-    [[params.profileMode.buttons]]
-      name = "About"
-      url = "about"
-    [[params.profileMode.buttons]]
-      name = "Experience"
-      url = "experience"
-    [[params.profileMode.buttons]]
-      name = "Posts"
-      url = "posts"
-    [[params.profileMode.buttons]]
-      name = "Projects"
-      url = "projects"
 
   # Social icons in the header — add Substack here once you have the URL
   [[params.socialIcons]]
