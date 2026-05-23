@@ -72,29 +72,29 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 ### Lean & Continuous Improvement
 
 {{< certs >}}
-{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="Expected 2026" abbr="MBB" >}}
+{{< cert name="Six Sigma Master Black Belt" issuer="In progress" year="Expected 2026" abbr="MBB" image="/img/issuers/lssi.png" >}}
 {{< cert name="Lean Six Sigma Yellow Belt" issuer="Lean Six Sigma Institute" year="Mar 2026" abbr="YB" image="/img/certs/lssi-yellow-belt.png" link="/certs/lssi-yellow-belt.pdf" >}}
 {{< cert name="Lean Six Sigma White Belt" issuer="Lean Six Sigma Institute" year="Dec 2025" abbr="WB" image="/img/certs/lssi-white-belt.png" link="/certs/lssi-white-belt.pdf" >}}
 {{< cert name="Lean Management" issuer="Lean Six Sigma Institute" year="Jun 2025" abbr="LMGT" image="/img/certs/lssi-lean-management.png" link="/certs/lssi-lean-management.png" >}}
-{{< cert name="Master Program — Continuous Improvement" issuer="APCER" year="Feb 2021" abbr="MCI" >}}
-{{< cert name="Kaizen Certifications (VSM, Production, Logistics)" issuer="Kaizen Institute" year="2020" abbr="KZN" >}}
-{{< cert name="Postgraduate Diploma in Lean Management" issuer="CLT Services" year="Dec 2019" abbr="PgD" >}}
+{{< cert name="Master Program — Continuous Improvement" issuer="APCER" year="Feb 2021" abbr="MCI" image="/img/issuers/apcer.png" >}}
+{{< cert name="Kaizen Certifications (VSM, Production, Logistics)" issuer="Kaizen Institute" year="2020" abbr="KZN" image="/img/issuers/kaizen.png" >}}
+{{< cert name="Postgraduate Diploma in Lean Management" issuer="CLT Services" year="Dec 2019" abbr="PgD" image="/img/issuers/clt-services.png" >}}
 {{< /certs >}}
 
 ### Leadership & Change
 
 {{< certs >}}
 {{< cert name="High-Performance Leadership: Lessons from Formula 1®" issuer="Santander Open Academy" year="Dec 2025" abbr="F1" image="/img/certs/santander-f1-leadership.png" link="/certs/santander-f1-leadership.pdf" >}}
-{{< cert name="HCMP® 3G Expert Professional" issuer="Human Change Management Institute" year="Jan 2022" abbr="HCMP" >}}
-{{< cert name="HCMP® 3G Practitioner" issuer="Human Change Management Institute" year="Jan 2022" abbr="3GP" >}}
-{{< cert name="Lean People Leadership" issuer="CLT Services" year="Apr 2020" abbr="LPL" >}}
+{{< cert name="HCMP® 3G Expert Professional" issuer="Human Change Management Institute" year="Jan 2022" abbr="HCMP" image="/img/issuers/hcmp-expert.png" >}}
+{{< cert name="HCMP® 3G Practitioner" issuer="Human Change Management Institute" year="Jan 2022" abbr="3GP" image="/img/issuers/hcmp-practitioner.png" >}}
+{{< cert name="Lean People Leadership" issuer="CLT Services" year="Apr 2020" abbr="LPL" image="/img/issuers/clt-services.png" >}}
 {{< /certs >}}
 
 ### Other
 
 {{< certs >}}
-{{< cert name="Occupational Health and Safety Senior Technician (Level 6)" issuer="Politécnico da Guarda" year="Jun 2022" abbr="OHS" >}}
-{{< cert name="Certificate of Pedagogical Skills" issuer="IEFP" year="Jun 2019" abbr="CCP" >}}
+{{< cert name="Occupational Health and Safety Senior Technician (Level 6)" issuer="Politécnico da Guarda" year="Jun 2022" abbr="OHS" image="/img/issuers/politecnico-guarda.svg" >}}
+{{< cert name="Certificate of Pedagogical Skills" issuer="IEFP" year="Jun 2019" abbr="CCP" image="/img/issuers/iefp.png" >}}
 {{< /certs >}}
 
 ## Languages
