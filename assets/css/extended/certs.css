@@ -44,6 +44,14 @@ a.cert-card { cursor: pointer; }
   padding: 4px;
 }
 
+/* CLT Services ships their brand logo as white-on-transparent (used on the dark header
+   of their own site). On the light cert tile that's white-on-white → invisible. Invert
+   the pixels so the logo reads as black-on-light. Scoped by src so only that one logo
+   is affected. */
+.cert-card-image img[src*="clt-services"] {
+  filter: invert(1);
+}
+
 .cert-card-image-placeholder {
   width: 100%;
   height: 100%;
