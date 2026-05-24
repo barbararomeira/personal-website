@@ -95,9 +95,9 @@ buildExpired = false
   weight = 15
 
 [[menu.main]]
-  identifier = "posts"
-  name = "Posts"
-  url = "/posts/"
+  identifier = "blogs"
+  name = "Blogs"
+  url = "/blogs/"
   weight = 20
 
 [[menu.main]]
