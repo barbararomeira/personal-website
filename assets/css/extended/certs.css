@@ -90,11 +90,22 @@ a.cert-card { cursor: pointer; }
   line-height: 1.35;
 }
 
-/* Touch devices have no hover — show overlay always so the cert is identifiable */
+/* Touch devices have no hover — show overlay always so the cert is identifiable.
+   Stronger gradient covering the full height + text-shadow so white text stays
+   readable even when it lands over a light area of the cert/logo behind it. */
 @media (hover: none) {
   .cert-card-overlay {
     opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 60%);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.6)  50%,
+      rgba(0, 0, 0, 0.3)  100%
+    );
+  }
+  .cert-card-name,
+  .cert-card-meta {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 0 6px rgba(0, 0, 0, 0.4);
   }
 }
 
