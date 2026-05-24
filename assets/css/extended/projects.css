@@ -201,6 +201,13 @@
   }
 }
 
+/* Mobile: bump small flow + tag fonts for readability on phones */
+@media (max-width: 480px) {
+  .flow-sub { font-size: 0.78em; }
+  .project-tag { font-size: 0.8em; padding: 0.22rem 0.7rem; }
+  .project-link { padding: 0.4rem 0; }
+}
+
 /* ───────────────── Tech tags + link ───────────────── */
 
 .project-tech {

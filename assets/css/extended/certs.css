@@ -97,3 +97,9 @@ a.cert-card { cursor: pointer; }
     background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 60%);
   }
 }
+
+/* Mobile: bump cert-card meta line slightly for readability at small sizes */
+@media (max-width: 480px) {
+  .cert-card-meta { font-size: 0.78em; }
+  .cert-card-name { font-size: 0.86em; }
+}
