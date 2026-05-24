@@ -78,15 +78,20 @@
   }
 }
 
-/* Mobile: tighten timeline padding so text has more usable width on narrow viewports. */
+/* Mobile: keep the marker fully inside the page padding so it can't get clipped
+   by PaperMod's .main edge / viewport. Marker now sits just inside the border
+   line (left: -2px) instead of straddling it with a -17px negative offset. */
 @media (max-width: 480px) {
   .timeline-event {
-    padding-left: 2.2rem;
+    padding-left: 2.8rem;
   }
   .timeline-event-marker {
-    left: -17px;
+    left: -2px;
     width: 32px;
     height: 32px;
+  }
+  .timeline-event-marker img {
+    padding: 2px;
   }
 }
 
