@@ -49,10 +49,8 @@ buildExpired = false
   # schema.org, SEO — only the visible header text/icon change.
   [params.label]
     text = "Bárbara Romeira"
-    icon = "img/icons/fries.gif"
+    icon = "img/icons/fries2.gif"
     iconHeight = 32
-    # Pool of icons; a small JS in the header partial picks one at random on each page load.
-    icons = ["img/icons/fries.gif", "img/icons/fries2.gif"]
 
   # Home page profile mode (hero-style landing)
   [params.profileMode]
