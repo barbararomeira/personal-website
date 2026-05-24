@@ -48,7 +48,7 @@ buildExpired = false
   # site.Title stays full ("Bárbara Gomes Romeira") for browser tabs, RSS,
   # schema.org, SEO — only the visible header text/icon change.
   [params.label]
-    text = "Bárbara"
+    text = "Bárbara Romeira"
     icon = "img/icons/fries.gif"
     iconHeight = 32
     # Pool of icons; a small JS in the header partial picks one at random on each page load.

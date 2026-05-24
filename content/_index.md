@@ -2,7 +2,7 @@
 title: "Bárbara Gomes Romeira"
 ---
 
-# Hey, it's Bárbara! 👋
+# Hey, there 👋
 
 AI Product Leader with a PhD in Industrial Engineering. I figure out what AI can actually *do* on a factory floor — not what it looks like in a slide deck.
 
