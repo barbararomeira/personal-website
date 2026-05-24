@@ -12,7 +12,6 @@
     {{ end }}
   </div>
   <div class="cert-card-overlay">
-    <div class="cert-card-name">{{ .Get "name" }}</div>
     <div class="cert-card-meta">{{ .Get "issuer" }}{{ with .Get "year" }} · {{ . }}{{ end }}</div>
   </div>
 {{- if $link -}}
