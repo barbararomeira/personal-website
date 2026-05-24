@@ -11,7 +11,17 @@
       <div class="cert-card-image-placeholder">{{ with .Get "abbr" }}{{ . }}{{ else }}CERT{{ end }}</div>
     {{ end }}
   </div>
+  {{/* When the image is a real cert thumbnail (under /img/certs/) the cert name is
+       already visible on the document, so we only show issuer + date.
+       For issuer-logo cards (under /img/issuers/) or placeholder cards, keep the
+       cert name in the overlay — otherwise the visitor sees a logo with no clue
+       which specific cert it represents. */}}
+  {{- $img := .Get "image" -}}
+  {{- $isCertThumb := and $img (strings.Contains $img "/img/certs/") -}}
   <div class="cert-card-overlay">
+    {{- if not $isCertThumb }}
+    <div class="cert-card-name">{{ .Get "name" }}</div>
+    {{- end }}
     <div class="cert-card-meta">{{ .Get "issuer" }}{{ with .Get "year" }} · {{ . }}{{ end }}</div>
   </div>
 {{- if $link -}}
