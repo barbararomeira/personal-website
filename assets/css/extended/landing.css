@@ -77,6 +77,15 @@ body:has(.profile) {
   body:has(.profile) { animation: none; }
 }
 
+/* Mobile: drop background-attachment:fixed (iOS Safari stretches it weirdly and
+   scroll stutters), and stop the 4-gradient drift animation (GPU/battery cost). */
+@media (max-width: 768px) {
+  body:has(.profile) {
+    background-attachment: scroll;
+    animation: none;
+  }
+}
+
 /* Two-column landing: large portrait on the left, intro copy on the right */
 .profile .profile_inner {
   display: grid;
