@@ -206,12 +206,15 @@ body:has(.profile) {
   box-shadow: 0 18px 48px var(--accent-glow);
 }
 
-/* ---- ABOUT: the longer story, below the hero ---- */
+/* ---- ABOUT: the longer story, below the hero — spans the full width
+   (including below the photo) in two readable columns ---- */
 .about {
-  max-width: 700px;
+  max-width: none;
   margin-top: clamp(2rem, 6vh, 4rem);
   padding-top: 2.5rem;
   border-top: 1px solid var(--border);
+  columns: 2;
+  column-gap: 4rem;
 }
 
 .about p {
@@ -219,6 +222,7 @@ body:has(.profile) {
   line-height: 1.72;
   font-size: 1.08rem;
   color: var(--content);
+  break-inside: avoid;
 }
 
 .about p:last-child {
