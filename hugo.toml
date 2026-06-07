@@ -58,8 +58,8 @@ buildExpired = false
     title = "Bárbara Gomes Romeira"
     subtitle = "AI Product Leader · PhD in Industrial Engineering · 7+ years building products and leading lean transformations across Europe and North America."
     imageUrl = "img/profile/barbara.jpg"
-    imageWidth = 280
-    imageHeight = 280
+    imageWidth = 380
+    imageHeight = 380
     imageTitle = "Bárbara Gomes Romeira"
 
   # Social icons in the header
