@@ -62,16 +62,16 @@ buildExpired = false
     imageHeight = 280
     imageTitle = "Bárbara Gomes Romeira"
 
-  # Social icons in the header — add Substack here once you have the URL
+  # Social icons in the header
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/barbararomeira"
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/dr-b%C3%A1rbara-gomes-romeira"
-  # [[params.socialIcons]]
-  #   name = "substack"
-  #   url = "https://YOURHANDLE.substack.com"
+  [[params.socialIcons]]
+    name = "substack"
+    url = "https://barbararomeira.substack.com"
 
   [params.fuseOpts]
     isCaseSensitive = false
