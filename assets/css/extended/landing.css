@@ -97,7 +97,7 @@ body:has(.profile) {
 .main .profile {
   align-items: start;
   min-height: auto;
-  padding-top: clamp(1.5rem, 5vh, 4rem);
+  padding-top: clamp(0.75rem, 2vh, 1.5rem);
 }
 
 .profile .profile_inner {
@@ -114,7 +114,7 @@ body:has(.profile) {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: stretch;
   gap: 4rem;
-  padding: clamp(1rem, 4vh, 3rem) 0;
+  padding: clamp(0.4rem, 1vh, 0.9rem) 0;
 }
 
 /* The photo is a circle whose diameter equals the text column's height, so the
@@ -129,7 +129,7 @@ body:has(.profile) {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--accent);
-  margin: 0 0 0.9rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .hero-tagline {
@@ -137,7 +137,7 @@ body:has(.profile) {
   line-height: 1.08;
   letter-spacing: -0.02em;
   font-weight: 800;
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 0.75rem 0;
   text-wrap: balance;
 }
 
@@ -146,7 +146,7 @@ body:has(.profile) {
   line-height: 1.5;
   color: var(--secondary);
   max-width: 34ch;
-  margin: 0 0 1.9rem 0;
+  margin: 0 0 1.1rem 0;
 }
 
 .hero-cta {
@@ -155,7 +155,7 @@ body:has(.profile) {
   align-items: center;
   gap: 0.7rem;
   margin-top: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-btn {
@@ -210,8 +210,8 @@ body:has(.profile) {
    so it sits below the photo, not in a narrow column to one side ---- */
 .about {
   max-width: none;
-  margin-top: clamp(2rem, 6vh, 4rem);
-  padding-top: 2.5rem;
+  margin-top: clamp(1rem, 2vh, 1.5rem);
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border);
 }
 
@@ -237,11 +237,16 @@ body:has(.profile) {
 
 /* Mobile: stack the hero, photo on top, everything centered */
 @media (max-width: 820px) {
+  .main .profile {
+    padding-top: 0.5rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 2rem;
+    gap: 1.25rem;
     min-height: 0;
+    padding: 0.25rem 0;
   }
 
   .hero-photo {

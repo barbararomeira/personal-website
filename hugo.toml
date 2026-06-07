@@ -68,7 +68,7 @@ buildExpired = false
     url = "https://github.com/barbararomeira"
   [[params.socialIcons]]
     name = "linkedin"
-    url = "https://www.linkedin.com/in/dr-b%C3%A1rbara-gomes-romeira"
+    url = "https://www.linkedin.com/in/dr-barbara-gomes-romeira"
   [[params.socialIcons]]
     name = "substack"
     url = "https://barbararomeira.substack.com"
