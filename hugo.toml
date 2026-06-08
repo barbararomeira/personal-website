@@ -72,6 +72,9 @@ buildExpired = false
   [[params.socialIcons]]
     name = "substack"
     url = "https://barbararomeira.substack.com"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "https://barbararomeira.substack.com/feed"
 
   [params.fuseOpts]
     isCaseSensitive = false
