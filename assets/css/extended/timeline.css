@@ -78,15 +78,16 @@
   }
 }
 
-/* Mobile: keep the marker fully inside the page padding so it can't get clipped
-   by PaperMod's .main edge / viewport. Marker now sits just inside the border
-   line (left: -2px) instead of straddling it with a -17px negative offset. */
+/* Mobile: center the logo marker ON the line (like desktop). The whole timeline
+   is nudged right by half the marker width so the centered marker's left edge
+   still sits inside the page padding and can't be clipped by the viewport. */
 @media (max-width: 480px) {
   .timeline-event {
+    margin-left: 10px;
     padding-left: 2.8rem;
   }
   .timeline-event-marker {
-    left: -2px;
+    left: -17px;
     width: 32px;
     height: 32px;
   }
