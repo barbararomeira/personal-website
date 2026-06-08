@@ -95,7 +95,7 @@ buildExpired = false
 [[menu.main]]
   identifier = "blogs"
   name = "Blogs"
-  url = "/blogs/"
+  url = "https://barbararomeira.substack.com"
   weight = 20
 
 [[menu.main]]
