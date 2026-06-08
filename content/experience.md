@@ -60,6 +60,7 @@ Dissertation: *Predictive Maintenance in the Context of Industry 4.0.* Grade **1
 ### AI & Product
 
 {{< certs >}}
+{{< cert name="Agentic AI for Business Leaders" issuer="Udacity" year="Jun 2026" abbr="AGAI" image="/img/certs/agentic-ai-business-leaders.png" link="/certs/agentic-ai-business-leaders.png" >}}
 {{< cert name="Introduction to Subagents" issuer="Anthropic" year="May 2026" abbr="SUB" image="/img/certs/anthropic-subagents.png" link="/certs/anthropic-subagents.pdf" >}}
 {{< cert name="Claude Code 101" issuer="Anthropic" year="May 2026" abbr="CC101" image="/img/certs/anthropic-claude-code-101.png" link="/certs/anthropic-claude-code-101.pdf" >}}
 {{< cert name="Practical Application of Generative AI" issuer="Project Management Institute" year="Dec 2025" abbr="PRACT" image="/img/certs/pmi-practical-genai.png" link="/certs/pmi-practical-genai.pdf" >}}
