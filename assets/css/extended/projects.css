@@ -245,3 +245,20 @@
   color: var(--accent-strong, var(--accent, var(--primary)));
   border-bottom-color: currentColor;
 }
+
+/* ─── Make the taxonomy Tags match the accent tech-chip style ─── */
+.post-single .post-tags a {
+  padding: 0.18rem 0.65rem;
+  font-size: 0.75em;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--accent, var(--secondary));
+  background: var(--accent-soft, transparent);
+  border: 1px solid var(--accent, var(--border));
+  border-radius: 999px;
+}
+
+.post-single .post-tags a:hover {
+  color: var(--accent-strong, var(--accent, var(--primary)));
+  border-color: var(--accent-strong, var(--accent, var(--border)));
+}
