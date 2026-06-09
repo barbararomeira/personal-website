@@ -99,13 +99,16 @@
 
 .flow-label {
   font-weight: 600;
-  font-size: 0.88em;
+  font-size: 0.76em;
   color: var(--primary);
   line-height: 1.25;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 .flow-sub {
-  font-size: 0.72em;
+  font-size: 0.64em;
   color: var(--secondary);
   margin-top: 0.2rem;
   line-height: 1.3;

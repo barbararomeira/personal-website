@@ -2,7 +2,7 @@
 title: "Weekly Multi-Agent Reports"
 date: 2026-05-20
 summary: "Weekly manufacturing reports written by an AI and fact-checked by a second AI — running locally on a laptop, no cloud infrastructure to set up."
-tags: ["Multi-agent", "Claude Code", "Manufacturing", "Automation"]
+tags: ["Agentic AI", "Multi-agent", "Claude Code", "Manufacturing", "Automation"]
 ---
 
 {{< project name="Weekly Multi-Agent Reports"
