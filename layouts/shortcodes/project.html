@@ -22,11 +22,11 @@
   </div>
   {{ end }}
 
-  {{ with .Get "tech" }}
-  <div class="project-tech">
-    {{ range (split . ",") }}<span class="project-tag">{{ trim . " " }}</span>{{ end }}
+  {{ with .Get "github" }}<a class="project-link" href="{{ . }}" target="_blank" rel="noopener">View on GitHub →</a>{{ end }}
+
+  {{ with .Page.Params.tags }}
+  <div class="project-tech project-tags-row">
+    {{ range . }}<a class="project-tag" href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
   </div>
   {{ end }}
-
-  {{ with .Get "github" }}<a class="project-link" href="{{ . }}" target="_blank" rel="noopener">View on GitHub →</a>{{ end }}
 </div>

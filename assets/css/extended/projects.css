@@ -231,6 +231,8 @@
   background: var(--accent-soft, transparent);
   border: 1px solid var(--accent, var(--border));
   border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .project-link {
@@ -248,19 +250,13 @@
   border-bottom-color: currentColor;
 }
 
-/* ─── Make the taxonomy Tags match the accent tech-chip style ─── */
-.post-single .post-tags a {
-  padding: 0.18rem 0.65rem;
-  font-size: 0.75em;
-  font-weight: 500;
-  line-height: 1.6;
-  color: var(--accent, var(--secondary));
-  background: var(--accent-soft, transparent);
-  border: 1px solid var(--accent, var(--border));
-  border-radius: 999px;
-}
+/* Tags now render inside the project card (so they show on list cards too);
+   hide the theme's duplicate tag footer on single project pages. */
+.post-single .post-tags { display: none; }
 
-.post-single .post-tags a:hover {
+.project-tags-row { margin-top: 1.25rem; }
+
+.project-tag:hover {
   color: var(--accent-strong, var(--accent, var(--primary)));
   border-color: var(--accent-strong, var(--accent, var(--border)));
 }
