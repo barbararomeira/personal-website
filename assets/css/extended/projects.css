@@ -122,14 +122,14 @@
   width: 40px;
   height: 2px;
   background: linear-gradient(to right, var(--border) 0%, var(--accent, var(--secondary)) 100%);
-  margin: 0 4px;
+  margin: 0 12px;
   align-self: center;
 }
 
 .flow-arrow::after {
   content: "";
   position: absolute;
-  right: -1px;
+  right: 0;
   top: -4px;
   width: 0;
   height: 0;
@@ -139,13 +139,13 @@
 
 .flow-dot {
   position: absolute;
-  top: -4px;
+  top: -3px;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--accent, #2c7da0);
-  box-shadow: 0 0 10px var(--accent, #2c7da0), 0 0 16px var(--accent-soft, rgba(44, 125, 160, 0.2));
+  box-shadow: 0 0 5px var(--accent, #2c7da0);
   animation: flow-travel 2.4s cubic-bezier(0.55, 0.06, 0.45, 0.94) infinite;
 }
 
@@ -157,10 +157,10 @@
 .flow-step-wrapper:nth-child(6) .flow-dot { animation-delay: 2s; }
 
 @keyframes flow-travel {
-  0%   { left: -5%; opacity: 0;  transform: scale(0.5); }
-  15%  { opacity: 1;             transform: scale(1); }
-  85%  { opacity: 1;             transform: scale(1); }
-  100% { left: 100%; opacity: 0; transform: scale(0.7); }
+  0%   { left: 0;                    opacity: 0; transform: scale(0.5); }
+  20%  { opacity: 1;                 transform: scale(1); }
+  80%  { opacity: 1;                 transform: scale(1); }
+  100% { left: calc(100% - 8px);     opacity: 0; transform: scale(0.7); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,15 +194,15 @@
 
   .flow-dot {
     top: 0;
-    left: -4px;
+    left: -3px;
     animation: flow-travel-v 2.4s cubic-bezier(0.55, 0.06, 0.45, 0.94) infinite;
   }
 
   @keyframes flow-travel-v {
-    0%   { top: -5%; opacity: 0;  transform: scale(0.5); }
-    15%  { opacity: 1;            transform: scale(1); }
-    85%  { opacity: 1;            transform: scale(1); }
-    100% { top: 100%; opacity: 0; transform: scale(0.7); }
+    0%   { top: 0;                 opacity: 0; transform: scale(0.5); }
+    20%  { opacity: 1;             transform: scale(1); }
+    80%  { opacity: 1;             transform: scale(1); }
+    100% { top: calc(100% - 8px);  opacity: 0; transform: scale(0.7); }
   }
 }
 
