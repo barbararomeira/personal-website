@@ -82,7 +82,7 @@
   align-items: center;
   text-align: center;
   padding: 0.85rem 0.55rem;
-  background: var(--theme);
+  background: var(--code-bg);
   border: 1px solid var(--border);
   border-radius: 10px;
   transition: border-color 0.2s ease, transform 0.2s ease;
