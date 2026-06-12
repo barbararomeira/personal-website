@@ -60,11 +60,12 @@
   margin: 1.5rem 0;
 }
 
+/* No min-width override: the wrapper must never shrink below the box text's
+   minimum width + the arrow's minimum, or the arrow spills onto the next box. */
 .flow-step-wrapper {
   display: flex;
   align-items: stretch;
   flex: 1 1 0;
-  min-width: 0;
 }
 
 .flow-step-wrapper .flow-arrow { align-self: center; }
@@ -116,35 +117,35 @@
   line-height: 1.3;
 }
 
-/* The arrow element spans the WHOLE gap (no margins); the line, dot and
-   arrowhead are drawn centered inside it, so the connector is symmetric in
-   the gap and never touches either box. */
+/* The arrow fills whatever gap remains after the boxes take their minimum
+   text width — no fixed size it might not get. Line, dot and arrowhead are
+   anchored relative to BOTH edges, so however narrow the gap, the connector
+   stays inside it. */
 .flow-arrow {
   position: relative;
-  flex: 0 0 64px;
-  width: 64px;
+  flex: 1 0 24px;
   height: 2px;
   background: none;
   margin: 0;
   align-self: center;
 }
 
-/* the connector line — inset 18px from each box, dead-centered in the gap */
+/* the connector line — 4px clear of the left box, ends at the arrowhead tip */
 .flow-arrow::before {
   content: "";
   position: absolute;
-  left: 18px;
-  right: 18px;
+  left: 4px;
+  right: 8px;
   top: 0;
   height: 2px;
   background: linear-gradient(to right, var(--border) 0%, var(--accent, var(--secondary)) 100%);
 }
 
-/* arrowhead sitting at the line's right end (18px clear of the next box) */
+/* arrowhead anchored off the RIGHT edge, tip 8px clear of the next box */
 .flow-arrow::after {
   content: "";
   position: absolute;
-  left: 42px;
+  right: 4px;
   top: -3px;
   width: 0;
   height: 0;
@@ -155,7 +156,7 @@
 .flow-dot {
   position: absolute;
   top: -3px;
-  left: 18px;
+  left: 4px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -172,18 +173,18 @@
 .flow-step-wrapper:nth-child(6) .flow-dot { animation-delay: 2s; }
 
 @keyframes flow-travel {
-  0%   { left: 18px; opacity: 0; transform: scale(0.5); }
-  20%  { opacity: 1;             transform: scale(1); }
-  80%  { opacity: 1;             transform: scale(1); }
-  100% { left: 38px; opacity: 0; transform: scale(0.7); }
+  0%   { left: 4px; opacity: 0; transform: scale(0.5); }
+  20%  { opacity: 1;            transform: scale(1); }
+  80%  { opacity: 1;            transform: scale(1); }
+  100% { left: calc(100% - 16px); opacity: 0; transform: scale(0.7); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .flow-dot { animation: none; opacity: 0.7; left: 50%; }
+  .flow-dot { animation: none; opacity: 0.7; left: calc(50% - 4px); }
 }
 
-/* Collapse to vertical layout on narrow screens */
-@media (max-width: 640px) {
+/* Collapse to vertical layout once the row can't fit six boxes + arrows */
+@media (max-width: 700px) {
   .project-flow { flex-direction: column; }
 
   .flow-step-wrapper {
@@ -192,6 +193,7 @@
   }
 
   .flow-arrow {
+    flex: 0 0 44px;
     width: 2px;
     height: 44px;
     margin: 0;
