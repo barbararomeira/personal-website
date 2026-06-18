@@ -12,6 +12,7 @@ hidemeta: true
 ## Work
 
 {{< event date="Jan 2024 – Present" role="AI Product Manager (Founded the Product function)" company="Deltia.ai" location="Remote" logo="/img/companies/deltia.png" current="true" >}}
+- As founding product owner, drove Deltia's growth from **seed to Series A** — making the product bets that scaled deployments 35x and opened new use cases and markets.
 - Identified the need for a dedicated product function, took ownership before the role formally existed, and built it from the ground up as the company scaled.
 - Helped scale the platform from 20 to 700+ deployed cameras (35x) in under two years, making the product decisions that let us onboard new customers faster and across different use cases.
 - Lead end-to-end product discovery: user interviews, JTBD synthesis, PRDs, wireframes, MVPs, and AI-native prototyping (Replit, Lovable, Claude Code).
@@ -22,7 +23,8 @@ hidemeta: true
 {{< /event >}}
 
 {{< event date="Nov 2023 – Present" role="Continuous Improvement & Customer Success Lead" company="Deltia.ai" location="Remote" logo="/img/companies/deltia.png" current="true" >}}
-- Built and led the CI / Customer Success department from scratch — processes, standards, and training programs that scaled across international accounts.
+- Built and owned the CI / Customer Success engine that carried Deltia from **seed to Series A** — proving value on the factory floor and retaining the accounts that made the round fundable.
+- Established the function from scratch — processes, standards, and training programs that scaled across international accounts.
 - Designed and deployed an AI-powered CI framework across 10+ client sites in North America and Europe (automotive, power tools, luxury goods, electrical systems), delivering €3M+ in cost savings.
 - Leveraged direct customer engagement to surface frontline pain points, feeding insights into the product roadmap — a unique feedback loop between customer success and product development.
 - Achieved a 30% increase in conversion rates through consultative engagement; expanded key accounts internationally.
