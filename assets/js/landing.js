@@ -91,7 +91,7 @@
 
   // Auto re-scan on a timer so the feed keeps "detecting" on its own, plus an
   // instant re-scan on hover.
-  var CYCLE_MS = 4000;
+  var CYCLE_MS = 10000;
   var autoTimer = null;
 
   function startAuto() {
