@@ -45,6 +45,15 @@ buildExpired = false
 
   [params.assets]
     disableHLJS = true
+    # Versioned so browsers fetch the new BR monogram instead of a stale
+    # "no favicon" cache from before these files existed. Bump v on change.
+    favicon = "favicon.ico?v=2"
+    favicon16x16 = "favicon-16x16.png?v=2"
+    favicon32x32 = "favicon-32x32.png?v=2"
+    apple_touch_icon = "apple-touch-icon.png?v=2"
+    safari_pinned_tab = "safari-pinned-tab.svg?v=2"
+    theme_color = "#2c7da0"
+    msapplication_TileColor = "#2c7da0"
 
   # Header logo: short display name + animated fries icon next to it.
   # site.Title stays full ("Bárbara Gomes Romeira") for browser tabs, RSS,
