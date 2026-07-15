@@ -89,10 +89,40 @@
   window.addEventListener("resize", positionOverlay, { passive: true });
   if (!img.complete) img.addEventListener("load", positionOverlay);
 
-  // Initial acquisition shortly after load, then re-scan on hover.
+  // Auto re-scan on a timer so the feed keeps "detecting" on its own, plus an
+  // instant re-scan on hover.
+  var CYCLE_MS = 4000;
+  var autoTimer = null;
+
+  function startAuto() {
+    if (reduce || autoTimer !== null) return;
+    autoTimer = window.setInterval(runScan, CYCLE_MS);
+  }
+  function stopAuto() {
+    if (autoTimer !== null) {
+      window.clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  // Initial acquisition shortly after load, then keep cycling on the timer.
   window.setTimeout(function () {
     positionOverlay();
     runScan();
+    startAuto();
   }, 450);
-  heroPhoto.addEventListener("mouseenter", runScan);
+
+  // Hover re-scans immediately and restarts the cadence (so it doesn't fire
+  // again right after a manual scan).
+  heroPhoto.addEventListener("mouseenter", function () {
+    runScan();
+    stopAuto();
+    startAuto();
+  });
+
+  // Pause the auto-cycle when the tab is hidden (battery-friendly).
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) stopAuto();
+    else startAuto();
+  });
 })();
