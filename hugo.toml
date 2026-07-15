@@ -47,9 +47,12 @@ buildExpired = false
     disableHLJS = true
     # Versioned so browsers fetch the new BR monogram instead of a stale
     # "no favicon" cache from before these files existed. Bump v on change.
-    favicon = "favicon.ico?v=2"
-    favicon16x16 = "favicon-16x16.png?v=2"
-    favicon32x32 = "favicon-32x32.png?v=2"
+    # TEST: animated fries gif as the tab favicon (animates in Firefox;
+    # Chrome/Safari show the first frame only). Revert these three to the
+    # favicon*.ico/.png "?v=2" lines to go back to the BR monogram.
+    favicon = "img/icons/fries2.gif?v=3"
+    favicon16x16 = "img/icons/fries2.gif?v=3"
+    favicon32x32 = "img/icons/fries2.gif?v=3"
     apple_touch_icon = "apple-touch-icon.png?v=2"
     safari_pinned_tab = "safari-pinned-tab.svg?v=2"
     theme_color = "#2c7da0"
