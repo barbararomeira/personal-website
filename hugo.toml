@@ -21,6 +21,8 @@ buildExpired = false
   description = "AI Product Leader. PhD in Industrial Engineering. Building products where AI meets the factory floor."
   keywords = ["AI", "Product Management", "Lean", "Continuous Improvement", "Industrial Engineering"]
   author = "Bárbara Gomes Romeira"
+  # Default social share card (Open Graph / Twitter) for links to the site.
+  images = ["img/og-image.png"]
   DateFormat = "January 2, 2006"
   defaultTheme = "auto"
   disableThemeToggle = false
