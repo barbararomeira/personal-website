@@ -309,3 +309,105 @@ body:has(.profile) {
 .post-content a:hover {
   color: var(--accent-strong);
 }
+
+/* ---- "Computer vision" detection feed (JS-driven, homepage only) --------- */
+/* Turns the portrait into a live object-detection frame: a scanline sweep, a
+   bounding box with corner brackets, and a label + confidence tag. The overlay
+   is positioned over the circular image box by landing.js. */
+.hero-photo {
+  position: relative;
+}
+
+.cv-overlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Scanline: a bright accent bar that sweeps top→bottom during acquisition. */
+.cv-scan {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  box-shadow: 0 0 12px 2px var(--accent-glow);
+  opacity: 0;
+}
+
+.cv-overlay.scanning .cv-scan {
+  animation: cv-sweep 0.8s ease-in-out;
+}
+
+@keyframes cv-sweep {
+  0%   { top: 4%;  opacity: 0; }
+  12%  {           opacity: 1; }
+  88%  {           opacity: 1; }
+  100% { top: 96%; opacity: 0; }
+}
+
+/* Bounding box: hidden until the sweep reveals it, then it "locks on". */
+.cv-box {
+  position: absolute;
+  inset: 6%;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: 6px;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+
+.cv-overlay.revealed .cv-box {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Corner brackets — the classic detection-UI look. */
+.cv-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2.5px solid var(--accent);
+}
+.cv-corner.tl { top: -2px;    left: -2px;    border-right: none;  border-bottom: none; border-top-left-radius: 6px; }
+.cv-corner.tr { top: -2px;    right: -2px;   border-left: none;   border-bottom: none; border-top-right-radius: 6px; }
+.cv-corner.bl { bottom: -2px; left: -2px;    border-right: none;  border-top: none;    border-bottom-left-radius: 6px; }
+.cv-corner.br { bottom: -2px; right: -2px;   border-left: none;   border-top: none;    border-bottom-right-radius: 6px; }
+
+/* Label tag pinned to the box's top-left, like a model's class output. */
+.cv-label {
+  position: absolute;
+  top: -1px;
+  left: -1.5px;
+  transform: translateY(-100%);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  padding: 2px 7px;
+  border-radius: 5px 5px 5px 0;
+  background: var(--accent);
+  color: #fff;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px var(--accent-glow);
+  opacity: 0;
+  transition: opacity 0.28s ease 0.06s;
+}
+
+.cv-label b { font-weight: 700; }
+.cv-label i { font-style: normal; opacity: 0.85; }
+
+.cv-overlay.revealed .cv-label {
+  opacity: 1;
+}
+
+/* Reduced motion: no sweep, box + label just present. */
+@media (prefers-reduced-motion: reduce) {
+  .cv-scan { display: none; }
+  .cv-box,
+  .cv-label { transition: none; }
+}

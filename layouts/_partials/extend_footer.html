@@ -1,0 +1,7 @@
+{{- /* Cursor-reactive ocean: load only on the homepage hero. */ -}}
+{{- if .IsHome }}
+{{- with resources.Get "js/landing.js" }}
+{{- $js := . | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}
+{{- end }}
