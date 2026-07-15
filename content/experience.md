@@ -11,8 +11,8 @@ hidemeta: true
 
 ## Work
 
-{{< event date="Jan 2024 – Present" role="Founding AI Product Manager" company="Deltia.ai" location="Remote" logo="/img/companies/deltia.png" current="true" >}}
-- As founding product owner, drove Deltia's growth from **pre-seed to Series A** — making the product bets that scaled deployments 35x and opened new use cases and markets.
+{{< event date="Jan 2024 – Present" role="Founding AI Product Manager" company="Almetra (formerly Deltia.ai)" location="Remote" logo="/img/companies/almetra.png" current="true" >}}
+- As founding product owner, drove Almetra's growth from **pre-seed to Series A** — making the product bets that scaled deployments 35x and opened new use cases and markets.
 - Identified the need for a dedicated product function, took ownership before the role formally existed, and built it from the ground up as the company scaled.
 - Helped scale the platform from 20 to 700+ deployed cameras (35x) in under two years, making the product decisions that let us onboard new customers faster and across different use cases.
 - Lead end-to-end product discovery: user interviews, JTBD synthesis, PRDs, wireframes, MVPs, and AI-native prototyping (Replit, Lovable, Claude Code).
@@ -22,8 +22,8 @@ hidemeta: true
 - Co-own the product roadmap and lead the company-wide OKR process.
 {{< /event >}}
 
-{{< event date="Nov 2023 – Present" role="Continuous Improvement & Customer Success Team Lead" company="Deltia.ai" location="Remote" logo="/img/companies/deltia.png" current="true" >}}
-- Built and owned the CI / Customer Success engine that carried Deltia from **pre-seed to Series A** — proving value on the factory floor and retaining the accounts that made the round fundable.
+{{< event date="Nov 2023 – Present" role="Continuous Improvement & Customer Success Team Lead" company="Almetra (formerly Deltia.ai)" location="Remote" logo="/img/companies/almetra.png" current="true" >}}
+- Built and owned the CI / Customer Success engine that carried Almetra from **pre-seed to Series A** — proving value on the factory floor and retaining the accounts that made the round fundable.
 - Established the function from scratch — processes, standards, and training programs that scaled across international accounts.
 - Designed and deployed an AI-powered CI framework across 10+ client sites in North America and Europe (automotive, power tools, luxury goods, electrical systems), delivering €3M+ in cost savings.
 - Leveraged direct customer engagement to surface frontline pain points, feeding insights into the product roadmap — a unique feedback loop between customer success and product development.
