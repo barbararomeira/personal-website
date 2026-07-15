@@ -22,7 +22,7 @@ buildExpired = false
   keywords = ["AI", "Product Management", "Lean", "Continuous Improvement", "Industrial Engineering"]
   author = "Bárbara Gomes Romeira"
   # Default social share card (Open Graph / Twitter) for links to the site.
-  images = ["img/og-image.png"]
+  images = ["img/og-image.png?v=2"]
   DateFormat = "January 2, 2006"
   defaultTheme = "auto"
   disableThemeToggle = false
