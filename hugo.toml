@@ -47,11 +47,12 @@ buildExpired = false
     disableHLJS = true
     # Versioned so browsers fetch the new BR monogram instead of a stale
     # "no favicon" cache from before these files existed. Bump v on change.
-    # Favicon = fire-breathing Mushu (head on brand-pink circle). Bump v on change.
-    favicon = "favicon.ico?v=5"
-    favicon16x16 = "favicon-16x16.png?v=5"
-    favicon32x32 = "favicon-32x32.png?v=5"
-    apple_touch_icon = "apple-touch-icon.png?v=5"
+    # Favicon = fries gif (her signature). Mushu lives on Instagram/the app, not
+    # the portfolio site. Bump v on change.
+    favicon = "img/icons/fries2.gif?v=6"
+    favicon16x16 = "img/icons/fries2.gif?v=6"
+    favicon32x32 = "img/icons/fries2.gif?v=6"
+    apple_touch_icon = "img/icons/fries2.gif?v=6"
     safari_pinned_tab = "safari-pinned-tab.svg?v=2"
     theme_color = "#2c7da0"
     msapplication_TileColor = "#2c7da0"
