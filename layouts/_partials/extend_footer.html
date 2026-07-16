@@ -1,4 +1,4 @@
-{{- /* Cursor-reactive ocean: load only on the homepage hero. */ -}}
+{{- /* CV detection feed: homepage hero only. */ -}}
 {{- if .IsHome }}
 {{- with resources.Get "js/landing.js" }}
 {{- $js := . | minify | fingerprint }}
