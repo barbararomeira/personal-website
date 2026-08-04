@@ -2,6 +2,9 @@
 title: "Weekly Multi-Agent Reports"
 date: 2026-05-20
 summary: "Weekly manufacturing reports written by an AI and fact-checked by a second AI — running locally on a laptop, no cloud infrastructure to set up."
+flow: "Raw Data → KPI Pipeline → Writer Agent → Verifier Agent → HTML Report"
+icons: "📊 🧮 ✍️ ✅ 📄"
+blurb: "One AI writes the report. A second checks every number before anyone sees it."
 tags: ["Agentic AI", "Multi-agent", "Claude Code", "Manufacturing", "Automation"]
 ---
 

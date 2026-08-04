@@ -26,10 +26,32 @@
 </div>
 {{- end }}
 
-{{- range .Pages.ByDate.Reverse }}
-<div class="post-content md-content">
-  {{ .Content }}
+{{/* One summary card per project. The full write-up lives on the project's own page —
+     rendering every project's content inline made this page grow by a screen each time
+     one was added, and you could not see how many there were without scrolling. */}}
+<div class="project-grid">
+  {{- range .Pages.ByDate.Reverse }}
+  <a class="project-summary" href="{{ .RelPermalink }}">
+    {{/* The pipeline, as icons — the same steps the detail page draws in full. The flow text
+         becomes the label, so a screen reader gets the steps rather than a row of emoji. */}}
+    {{- $icons := .Params.icons }}{{ $flow := .Params.flow }}
+    {{- with $icons }}
+    <div class="project-pipe" role="img" aria-label="{{ $flow | default "project pipeline" }}">
+      {{- range $i, $ic := (split . " ") }}
+      {{- if $i }}<span class="project-pipe-arrow" aria-hidden="true"></span>{{ end }}
+      <span class="project-pipe-icon" aria-hidden="true">{{ $ic }}</span>
+      {{- end }}
+    </div>
+    {{- end }}
+    <h2 class="project-summary-name">{{ .Title }}</h2>
+    {{- with .Params.blurb }}<p class="project-summary-text">{{ . | safeHTML }}</p>{{ end }}
+    {{- with .Params.tags }}
+    <div class="project-summary-tags">
+      {{ range first 3 . }}<span class="project-tag project-tag-static">{{ . }}</span>{{ end }}
+    </div>
+    {{- end }}
+  </a>
+  {{- end }}
 </div>
-{{- end }}
 
 {{- end }}

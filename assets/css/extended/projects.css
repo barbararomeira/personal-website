@@ -287,3 +287,216 @@
   color: var(--accent-strong, var(--accent, var(--primary)));
   border-color: var(--accent-strong, var(--accent, var(--border)));
 }
+
+/* ───────────── Projects index: summary grid ─────────────
+   The index used to render every project's full write-up inline. Four projects was
+   ~1300 words and seven screens on a phone, and the count of projects — the thing a
+   skimming reader actually wants — was invisible. The index is now scannable; the
+   full write-up lives on each project's own page. */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.project-summary {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.3rem 1.1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none !important;
+  /* Grid items default to min-width:auto, which lets a long unbroken string stretch its
+     track. Belt-and-braces so a future project with a wide flow line cannot widen the grid. */
+  min-width: 0;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-summary:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.project-summary:hover .project-summary-name {
+  color: var(--accent);
+}
+
+.project-summary-name {
+  transition: color 0.15s ease;
+}
+
+.project-summary-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.12em;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+/* Matcha completes the brand pair with the ocean blue in landing.css. Used only as the
+   pipeline's end state, so the strip reads as blue → green, start → output. */
+:root {
+  --matcha: #6e8f52;
+  --matcha-soft: rgba(110, 143, 82, 0.11);
+  --accent-faint: rgba(44, 125, 160, 0.05);
+}
+
+:root[data-theme="dark"] {
+  --matcha: #9cc177;
+  --matcha-soft: rgba(156, 193, 119, 0.12);
+  --accent-faint: rgba(93, 171, 204, 0.06);
+}
+
+/* The pipeline as icons — the card's visual anchor, and the one thing that makes this
+   grid read as *these* projects rather than a generic list of cards.
+
+   The connectors stretch (flex: 1) so a four-step and a six-step project both span the
+   card: the leftover space becomes the pipeline instead of an empty gap. */
+.project-pipe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin-bottom: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  background: linear-gradient(100deg, var(--accent-soft) 0%, var(--matcha-soft) 100%);
+  border: 1px solid var(--accent-soft);
+  border-radius: 8px;
+}
+
+.project-pipe-icon {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  flex: none;
+}
+
+.project-pipe-arrow {
+  flex: 1 1 auto;
+  min-width: 10px;
+  height: 1.5px;
+  border-radius: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* The final leg lands in matcha, so the pipeline visibly resolves into its output.
+   Arrows and icons are both spans, so :last-of-type would not find it — the last arrow
+   is always the second-to-last child, with the closing icon after it. */
+.project-pipe-arrow:nth-last-child(2) {
+  background: var(--matcha);
+  opacity: 0.75;
+}
+
+.project-summary-text {
+  margin: 0 0 1rem 0;
+  color: var(--secondary);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.project-summary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+}
+
+.project-tag-static {
+  pointer-events: none;
+}
+
+/* ───────────── Project detail page ───────────── */
+
+.project-single-header { padding-bottom: 0; }
+
+/* The card carries its own border on the index; on its own page it is the whole page. */
+.project-single-header + .post-content .project-card {
+  margin-top: 0.5rem;
+}
+
+.project-single-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  font-size: 0.9em;
+}
+
+@media (max-width: 500px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+
+/* ───────── Brand colour on the detail page ─────────
+   Same idea as the index cards: the pipeline runs in ocean blue and lands in matcha,
+   so the last step reads as the output rather than just another box. Kept to two
+   colours and one transition — the accent is the story, not a palette parade. */
+
+/* The final leg — line, arrowhead and travelling dot all resolve to matcha.
+   :last-child is the closing node (its arrow is hidden), so the last *visible*
+   connector belongs to the wrapper before it. */
+.flow-step-wrapper:nth-last-child(2) .flow-arrow::before {
+  background: linear-gradient(to right, var(--accent) 0%, var(--matcha) 100%);
+}
+
+.flow-step-wrapper:nth-last-child(2) .flow-arrow::after {
+  border-left-color: var(--matcha);
+}
+
+.flow-step-wrapper:nth-last-child(2) .flow-dot {
+  background: var(--matcha);
+  box-shadow: 0 0 5px var(--matcha);
+}
+
+/* The closing node, tinted as the thing the pipeline produces. */
+.flow-step-wrapper:last-child .flow-node {
+  background: linear-gradient(160deg, var(--matcha-soft) 0%, var(--code-bg) 90%);
+  border-color: var(--matcha-soft);
+}
+
+.flow-step-wrapper:last-child .flow-node:hover {
+  border-color: var(--matcha);
+}
+
+/* Problem in blue, impact in matcha — the labels carry the same start/end logic
+   as the diagram above them. Selected as "the block after the flow": :last-of-type
+   matches by element type, and the tags row is the card's last div, so it hit nothing. */
+.project-flow ~ .project-block .project-block-label {
+  color: var(--matcha);
+}
+
+/* The card itself picks up the brand, matching the index cards' hover. */
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.project-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .flow-step-wrapper:nth-last-child(2) .flow-arrow::before {
+    background: linear-gradient(to bottom, var(--accent) 0%, var(--matcha) 100%);
+  }
+}
+
+/* The row now reads start → end: the opening node in ocean blue, the closing one in
+   matcha, and the steps between carrying a whisper of the accent instead of flat grey.
+   Two colours, one direction — the middles stay quiet so the ends still mean something. */
+.flow-node {
+  background: linear-gradient(var(--accent-faint), var(--accent-faint)), var(--code-bg);
+}
+
+.flow-step-wrapper:first-child .flow-node {
+  background: linear-gradient(160deg, var(--accent-soft) 0%, var(--code-bg) 90%);
+  border-color: var(--accent-soft);
+}
+
+.flow-step-wrapper:first-child .flow-node:hover {
+  border-color: var(--accent);
+}

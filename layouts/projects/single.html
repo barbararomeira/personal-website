@@ -1,0 +1,18 @@
+{{- define "main" }}
+
+{{/* The project shortcode renders its own title, tagline and tags, so this page deliberately
+     omits PaperMod's usual post header — otherwise the name appears twice. */}}
+<header class="page-header project-single-header">
+  {{- partial "breadcrumbs.html" . }}
+</header>
+
+<div class="post-content md-content">
+  {{ .Content }}
+</div>
+
+<div class="project-single-nav">
+  <a href="{{ "projects/" | relURL }}">← All projects</a>
+  {{- with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+</div>
+
+{{- end }}

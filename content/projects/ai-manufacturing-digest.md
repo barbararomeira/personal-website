@@ -2,6 +2,9 @@
 title: "AI Manufacturing Digest"
 date: 2026-03-01
 summary: "A daily news bot for AI in manufacturing — read everything for me, every morning."
+flow: "RSS Feeds → Filter → LLM → Notion DB"
+icons: "📰 🔍 ✨ 📋"
+blurb: "A daily news bot that reads AI-in-manufacturing so I don't have to."
 tags: ["Automation", "Manufacturing"]
 ---
 
