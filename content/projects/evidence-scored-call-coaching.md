@@ -4,7 +4,7 @@ date: 2026-08-02
 summary: "Turns sales-call transcripts into rubric scores and per-rep coaching — with a verbatim quote behind every point given or withheld, and no score at all on calls the rubric was never asking about."
 flow: "Transcript → Extract Once → Scope Gate → Two Scores → Coach Brief"
 icons: "📞 🧩 🚦 ⚖️ 🗣️"
-blurb: "Scores sales calls against a rubric — and refuses to score the wrong ones."
+blurb: "Call scoring, message adherence and per-rep coaching — and it refuses to score the wrong calls."
 tags: ["Agentic AI", "Multi-agent", "Claude Code", "Product Management", "Evaluation", "Sales Enablement", "Automation"]
 ---
 

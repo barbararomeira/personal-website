@@ -4,7 +4,7 @@ date: 2026-05-20
 summary: "Weekly manufacturing reports written by an AI and fact-checked by a second AI — running locally on a laptop, no cloud infrastructure to set up."
 flow: "Raw Data → KPI Pipeline → Writer Agent → Verifier Agent → HTML Report"
 icons: "📊 🧮 ✍️ ✅ 📄"
-blurb: "One AI writes the report. A second checks every number before anyone sees it."
+blurb: "Customer reporting, with a verifier — one AI writes it, a second checks every number."
 tags: ["Agentic AI", "Multi-agent", "Claude Code", "Manufacturing", "Automation"]
 ---
 

@@ -4,7 +4,7 @@ date: 2026-06-06
 summary: "A three-agent expense-reimbursement pipeline redesigned to be safe to ship — hallucination guardrails, tiered human approvals, and EU privacy controls, with a runnable version that tests offline."
 flow: "Receipt → Extraction → Compute → Decision → Approval → Payment"
 icons: "📸 🔍 🧮 ⚖️ 👥 💳"
-blurb: "A three-agent expense pipeline, built to be safe enough to actually ship."
+blurb: "Expense automation, human review and EU privacy — a pipeline safe enough to actually ship."
 tags: ["Agentic AI", "Multi-agent", "Product Management", "Privacy & Compliance"]
 ---
 
