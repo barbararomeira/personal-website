@@ -47,7 +47,7 @@
     {{- with .Params.blurb }}<p class="project-summary-text">{{ . | safeHTML }}</p>{{ end }}
     {{- with .Params.tags }}
     <div class="project-summary-tags">
-      {{ range first 3 . }}<span class="project-tag project-tag-static">{{ . }}</span>{{ end }}
+      {{ range first 8 . }}<span class="project-tag project-tag-static">{{ . }}</span>{{ end }}
     </div>
     {{- end }}
   </a>

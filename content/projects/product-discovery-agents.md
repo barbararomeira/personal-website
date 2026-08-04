@@ -1,10 +1,10 @@
 ---
 title: "Product Discovery Agents"
 date: 2026-08-04
-summary: "Reads every customer-facing call and keeps one accumulating backlog, ranked by who asked, how strongly they said it, and how many times it came back — with their own words attached, and no score the agents made up."
+summary: "Roadmap validation, customer feedback, new feature requests and gaps — read out of every customer-facing call and kept in one accumulating backlog, ranked by who asked, how strongly they said it, and how many times it came back."
 flow: "Capture → Structure → Signal Matrix → Briefs → You Decide"
 icons: "💬 📄 📊 📝 🧑"
-blurb: "Evidence, not whoever remembers loudest."
+blurb: "Roadmap validation, feature requests and gaps — evidence, not whoever remembers loudest."
 tags: ["Agentic AI", "Multi-agent", "Claude Code", "Product Management", "Product Discovery", "Automation"]
 ---
 

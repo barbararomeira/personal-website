@@ -401,12 +401,17 @@
 .project-summary-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.28rem 0.3rem;
   margin-top: auto;
 }
 
 .project-tag-static {
   pointer-events: none;
+  /* Smaller than the detail-page tags: a card shows six of these, so they have to
+     read as a quiet index of topics rather than compete with the blurb above them. */
+  font-size: 0.68em;
+  padding: 0.12rem 0.5rem;
+  font-weight: 400;
 }
 
 /* ───────────── Project detail page ───────────── */
