@@ -1,0 +1,73 @@
+/* Fries as a hover reward, not a cursor trail.
+ *
+ * The first attempt made the cursor a fry and dropped a trail on every mouse move. It
+ * was noise: it fired while you were reading, not while you were interested in anything.
+ * This version costs nothing until you actually point at a project — one fry lifts into
+ * the corner of the card you're considering, and leaves when you do.
+ *
+ * Pure CSS, no JS, no custom cursor.
+ */
+
+.project-summary,
+.project-card {
+  position: relative;
+}
+
+.project-summary::after,
+.project-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.9rem;
+  width: 22px;
+  height: 27px;
+  background: url("/img/icons/fries-hover.png") center / contain no-repeat;
+  opacity: 0;
+  transform: translateY(6px) rotate(-8deg);
+  transition: opacity 0.22s ease, transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.project-summary:hover::after,
+.project-card:hover::after {
+  opacity: 0.92;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* On the index the icon band runs the full width of the card, so the fry sits in the
+   bottom-right, opposite the tags. On the detail page the card is the whole page and the
+   bottom corner is a long scroll away, so it goes up beside the title instead. */
+.project-card::after {
+  top: 1.2rem;
+  right: 1.3rem;
+  bottom: auto;
+  width: 26px;
+  height: 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-summary::after,
+  .project-card::after {
+    transition: opacity 0.22s ease;
+    transform: none;
+  }
+
+  .project-summary:hover::after,
+  .project-card:hover::after {
+    transform: none;
+  }
+}
+
+/* No hover state to reward on touch, and the fry would just overlap the title. */
+@media (pointer: coarse) {
+  .project-summary::after,
+  .project-card::after {
+    display: none;
+  }
+}
+
+/* Keep the last tag from wrapping under the fry. Reserved permanently rather than only
+   on hover, so nothing shifts when it appears. */
+.project-summary .project-summary-tags {
+  padding-right: 30px;
+}
