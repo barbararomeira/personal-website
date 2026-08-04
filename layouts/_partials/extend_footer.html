@@ -1,3 +1,17 @@
+{{- /* HEADS UP: the page context in this partial is not reliable on every page.
+
+       Under Hugo 0.163.3 + PaperMod, some pages render this partial with a *different*
+       page as `.` — /experience/ and /projects/<any-project>/ both report themselves as
+       projects/agentic-expense-reporting.md. Page bodies are unaffected; only this
+       partial's context is wrong.
+
+       `.IsHome` below happens to be correct everywhere (home reports itself properly, and
+       the mis-contexted pages resolve to a project page, which is also not home), so it
+       is left alone. But do not add a new `{{ if }}` here based on .Section, .Type,
+       .RelPermalink or .File — it will silently fire on the wrong pages. Scope from the
+       page's own content instead: CSS :has(), or a querySelector guard in the script.
+       assets/css/extended/fries.css does it that way for exactly this reason. */ -}}
+
 {{- /* CV detection feed: homepage hero only. */ -}}
 {{- if .IsHome }}
 {{- with resources.Get "js/landing.js" }}
