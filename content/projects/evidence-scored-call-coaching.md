@@ -5,7 +5,7 @@ summary: "Turns sales-call transcripts into rubric scores and per-rep coaching �
 flow: "Transcript → Extract Once → Scope Gate → Two Scores → Coach Brief"
 icons: "📞 🧩 🚦 ⚖️ 🗣️"
 blurb: "Scores sales calls against a rubric — and refuses to score the wrong ones."
-tags: ["Agentic AI", "Multi-agent", "Claude Code", "Evaluation", "Sales Enablement", "Automation"]
+tags: ["Agentic AI", "Multi-agent", "Claude Code", "Product Management", "Evaluation", "Sales Enablement", "Automation"]
 ---
 
 {{< project name="Evidence-Scored Call Coaching"

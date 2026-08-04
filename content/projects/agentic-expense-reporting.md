@@ -5,7 +5,7 @@ summary: "A three-agent expense-reimbursement pipeline redesigned to be safe to 
 flow: "Receipt → Extraction → Compute → Decision → Approval → Payment"
 icons: "📸 🔍 🧮 ⚖️ 👥 💳"
 blurb: "A three-agent expense pipeline, built to be safe enough to actually ship."
-tags: ["Agentic AI", "Multi-agent", "Product Leadership", "Privacy & Compliance"]
+tags: ["Agentic AI", "Multi-agent", "Product Management", "Privacy & Compliance"]
 ---
 
 {{< project name="Agentic Expense Reporting System"
